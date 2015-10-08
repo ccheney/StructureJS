@@ -1,4 +1,4 @@
-import BaseModel = require('BaseModel');
+import BaseModel from 'BaseModel';
 
 class StatusModel extends BaseModel
 {
@@ -56,4 +56,4 @@ class StatusModel extends BaseModel
 
 }
 
-export = StatusModel;
+export default StatusModel;

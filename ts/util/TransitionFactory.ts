@@ -1,15 +1,15 @@
-import BaseObject = require('../BaseObject');
-import DisplayObjectContainer = require('../display/DisplayObjectContainer');
-import DOMElement = require('../display/DOMElement');
-import ITransition = require('../interface/ITransition');
-import TransitionType = require('../constant/TransitionType');
-import TransitionNone = require('../controller/transition/TransitionNone');
-import TransitionPushLeft = require('../controller/transition/TransitionPushLeft');
-import TransitionPushRight = require('../controller/transition/TransitionPushRight');
-import TransitionPushUp = require('../controller/transition/TransitionPushUp');
-import TransitionPushDown = require('../controller/transition/TransitionPushDown');
-import TransitionCrossFade = require('../controller/transition/TransitionCrossFade');
-import TransitionFadeOutAndIn = require('../controller/transition/TransitionFadeOutAndIn');
+import BaseObject from '../BaseObject';
+import DisplayObjectContainer from '../display/DisplayObjectContainer';
+import DOMElement from '../display/DOMElement';
+import ITransition from '../interface/ITransition';
+import TransitionType from '../constant/TransitionType';
+import TransitionNone from '../controller/transition/TransitionNone';
+import TransitionPushLeft from '../controller/transition/TransitionPushLeft';
+import TransitionPushRight from '../controller/transition/TransitionPushRight';
+import TransitionPushUp from '../controller/transition/TransitionPushUp';
+import TransitionPushDown from '../controller/transition/TransitionPushDown';
+import TransitionCrossFade from '../controller/transition/TransitionCrossFade';
+import TransitionFadeOutAndIn from '../controller/transition/TransitionFadeOutAndIn';
 
 /**
  * TODO: YUIDoc_comment
@@ -102,4 +102,4 @@ class TransitionFactory extends BaseObject
     }
 }
 
-export = TransitionFactory;
+export default TransitionFactory;

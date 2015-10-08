@@ -47,7 +47,7 @@ class URLContentType
     public static WEBM:string = "audio/webm";
 }
 
-export = URLContentType;
+export default URLContentType;
 
 /*Type message [edit]
  message/http: Defined in RFC 2616

@@ -1,6 +1,6 @@
-import BaseRequest = require('./BaseRequest');
-import URLRequest = require('../net/URLRequest');
-import URLContentType = require('../net/URLContentType');
+import BaseRequest from './BaseRequest';
+import URLRequest from '../net/URLRequest';
+import URLContentType from '../net/URLContentType';
 
 class JsonRequest extends BaseRequest
 {
@@ -33,4 +33,4 @@ class JsonRequest extends BaseRequest
     }
 }
 
-export = JsonRequest;
+export default JsonRequest;

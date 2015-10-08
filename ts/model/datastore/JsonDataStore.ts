@@ -1,11 +1,11 @@
-import DataStoreAbstract = require('./DataStoreAbstract');
-import URLRequest = require('../../net/URLRequest');
-import URLLoader = require('../../net/URLLoader');
-import URLRequestMethod = require('../../net/URLRequestMethod');
-import URLLoaderDataFormat = require('../../net/URLLoaderDataFormat');
-import URLContentType = require('../../net/URLContentType');
-import LoaderEvent = require('../../event/LoaderEvent');
-import IDataStore = require('../../interface/IDataStore');
+import DataStoreAbstract from './DataStoreAbstract';
+import URLRequest from '../../net/URLRequest';
+import URLLoader from '../../net/URLLoader';
+import URLRequestMethod from '../../net/URLRequestMethod';
+import URLLoaderDataFormat from '../../net/URLLoaderDataFormat';
+import URLContentType from '../../net/URLContentType';
+import LoaderEvent from '../../event/LoaderEvent';
+import IDataStore from '../../interface/IDataStore';
 
 /**
  * The JsonDataStore...
@@ -84,4 +84,4 @@ class JsonDataStore extends DataStoreAbstract
         }
 }
 
-export = JsonDataStore;
+export default JsonDataStore;

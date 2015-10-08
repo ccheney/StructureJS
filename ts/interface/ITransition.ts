@@ -1,6 +1,6 @@
-import DisplayObjectContainer = require('../display/DisplayObjectContainer');
-import DOMElement = require('../display/DOMElement');
-import IEventDispatcher = require('../interface/IEventDispatcher');
+import DisplayObjectContainer from '../display/DisplayObjectContainer';
+import DOMElement from '../display/DOMElement';
+import IEventDispatcher from '../interface/IEventDispatcher';
 
 /**
  * TODO: YUIDoc_comment
@@ -15,4 +15,4 @@ interface ITransition extends IEventDispatcher
     complete():any;
 }
 
-export = ITransition;
+export default ITransition;

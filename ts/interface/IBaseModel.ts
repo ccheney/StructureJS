@@ -34,4 +34,4 @@ interface IBaseModel
     destroy():void;
 }
 
-export = IBaseModel;
+export default IBaseModel;

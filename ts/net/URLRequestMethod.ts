@@ -17,4 +17,4 @@ class URLRequestMethod
     public static OPTIONS:string = "OPTIONS";
 }
 
-export = URLRequestMethod;
+export default URLRequestMethod;

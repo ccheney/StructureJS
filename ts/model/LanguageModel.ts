@@ -1,9 +1,9 @@
-import LocalStorageController = require('../controller/LocalStorageController');
-import EventDispatcher = require('../event/EventDispatcher');
-import RequestEvent = require('../event/RequestEvent');
-import LanguageEvent = require('../event/LanguageEvent');
-import BaseRequest = require('../request/BaseRequest');
-import LanguageConfigModel = require('./LanguageConfigModel');
+import LocalStorageController from '../controller/LocalStorageController';
+import EventDispatcher from '../event/EventDispatcher';
+import RequestEvent from '../event/RequestEvent';
+import LanguageEvent from '../event/LanguageEvent';
+import BaseRequest from '../request/BaseRequest';
+import LanguageConfigModel from './LanguageConfigModel';
 
 /**
  * The LanguageModel...
@@ -190,4 +190,4 @@ class LanguageModel extends EventDispatcher
     }
 }
 
-export = LanguageModel;
+export default LanguageModel;

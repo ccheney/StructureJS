@@ -1,4 +1,4 @@
-import IEventDispatcher = require('./IEventDispatcher');
+import IEventDispatcher from './IEventDispatcher';
 
 /**
  * TODO: YUIDoc_comment
@@ -33,4 +33,4 @@ interface IDataStore extends IEventDispatcher
     load():any;
 }
 
-export = IDataStore;
+export default IDataStore;

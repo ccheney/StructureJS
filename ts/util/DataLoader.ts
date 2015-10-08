@@ -15,4 +15,4 @@ class DataLoader
     }
 }
 
-export = DataLoader;
+export default DataLoader;

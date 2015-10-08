@@ -1,4 +1,4 @@
-import BaseEvent = require('./BaseEvent');
+import BaseEvent from './BaseEvent';
 
 /**
  * The LanguageEvent...
@@ -52,4 +52,4 @@ class LanguageEvent extends BaseEvent
 
 }
 
-export = LanguageEvent;
+export default LanguageEvent;

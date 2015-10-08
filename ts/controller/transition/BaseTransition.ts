@@ -1,9 +1,9 @@
-import BaseObject = require('../../BaseObject');
-import ITransition = require('../../interface/ITransition');
-import EventDispatcher = require('../../event/EventDispatcher');
-import DisplayObjectContainer = require('../../display/DisplayObjectContainer');
-import DOMElement = require('../../display/DOMElement');
-import TweenEvent = require('../../event/TweenEvent');
+import BaseObject from '../../BaseObject';
+import ITransition from '../../interface/ITransition';
+import EventDispatcher from '../../event/EventDispatcher';
+import DisplayObjectContainer from '../../display/DisplayObjectContainer';
+import DOMElement from '../../display/DOMElement';
+import TweenEvent from '../../event/TweenEvent';
 
 class BaseTransition extends EventDispatcher implements ITransition
 {
@@ -118,4 +118,4 @@ class BaseTransition extends EventDispatcher implements ITransition
     }
 }
 
-export = BaseTransition;
+export default BaseTransition;

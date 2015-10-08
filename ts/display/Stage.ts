@@ -1,4 +1,4 @@
-import DOMElement = require('./DOMElement');
+import DOMElement from './DOMElement';
 
 /**
  * The {{#crossLink "Stage"}}{{/crossLink}} class should be extended by your main application or root class.
@@ -17,8 +17,8 @@ import DOMElement = require('./DOMElement');
  *     define(function (require, exports, module) {
  *         'use strict';
  *
- *         var Extend = require('structurejs/util/Extend');
- *         var Stage = require('replace/path/Stage');
+ *         var Extend from 'structurejs/util/Extend');
+ *         var Stage from 'replace/path/Stage');
  *
  *         var MainClass = (function () {
  *
@@ -117,4 +117,4 @@ class Stage extends DOMElement
     }
 }
 
-export = Stage;
+export default Stage;

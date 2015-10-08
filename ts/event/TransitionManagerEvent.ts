@@ -1,4 +1,4 @@
-import BaseEvent = require('./BaseEvent');
+import BaseEvent from './BaseEvent';
 
 /**
  * The TransitionManagerEvent...
@@ -52,4 +52,4 @@ class TransitionManagerEvent extends BaseEvent
 
 }
 
-export = TransitionManagerEvent;
+export default TransitionManagerEvent;

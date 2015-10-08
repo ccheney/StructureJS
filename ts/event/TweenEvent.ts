@@ -1,4 +1,4 @@
-import BaseEvent = require('./BaseEvent');
+import BaseEvent from './BaseEvent';
 
 /**
  * TODO: YUIDoc_comment
@@ -52,4 +52,4 @@ class TweenEvent extends BaseEvent
 
 }
 
-export = TweenEvent;
+export default TweenEvent;

@@ -1,10 +1,10 @@
-import EventDispatcher = require('../event/EventDispatcher');
-import LoaderEvent = require('../event/LoaderEvent');
-import URLRequest = require('../net/URLRequest');
-import URLLoader = require('../net/URLLoader');
-import URLRequestMethod = require('../net/URLRequestMethod');
-import URLLoaderDataFormat = require('../net/URLLoaderDataFormat');
-import IDataStore = require('../interface/IDataStore');
+import EventDispatcher from '../event/EventDispatcher';
+import LoaderEvent from '../event/LoaderEvent';
+import URLRequest from '../net/URLRequest';
+import URLLoader from '../net/URLLoader';
+import URLRequestMethod from '../net/URLRequestMethod';
+import URLLoaderDataFormat from '../net/URLLoaderDataFormat';
+import IDataStore from '../interface/IDataStore';
 
 /**
  * The HtmlLoader...
@@ -58,4 +58,4 @@ class HtmlLoader extends EventDispatcher implements IDataStore
     }
 }
 
-export = HtmlLoader;
+export default HtmlLoader;

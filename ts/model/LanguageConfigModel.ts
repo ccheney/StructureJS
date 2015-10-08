@@ -1,4 +1,4 @@
-import BaseModel = require('BaseModel');
+import BaseModel from 'BaseModel';
 
 class LanguageConfigModel extends BaseModel
 {
@@ -41,4 +41,4 @@ class LanguageConfigModel extends BaseModel
 
 }
 
-export = LanguageConfigModel;
+export default LanguageConfigModel;
