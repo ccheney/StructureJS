@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -16,7 +15,7 @@ var __extends = (this && this.__extends) || function(d, b) {
         define(deps, factory);
     }
 })(["require", "exports", './DOMElement'], function(require, exports) {
-    var DOMElement = require('./DOMElement');
+    var DOMElement_1 = require('./DOMElement');
     /**
      * The {{#crossLink "Stage"}}{{/crossLink}} class should be extended by your main application or root class.
      *
@@ -34,8 +33,8 @@ var __extends = (this && this.__extends) || function(d, b) {
      *     define(function (require, exports, module) {
      *         'use strict';
      *
-     *         var Extend = require('structurejs/util/Extend');
-     *         var Stage = require('replace/path/Stage');
+     *         var Extend from 'structurejs/util/Extend');
+     *         var Stage from 'replace/path/Stage');
      *
      *         var MainClass = (function () {
      *
@@ -125,6 +124,9 @@ var __extends = (this && this.__extends) || function(d, b) {
             return this;
         };
         return Stage;
-    })(DOMElement);
-    return Stage;
+    })(DOMElement_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = Stage;
 });

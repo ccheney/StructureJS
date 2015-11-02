@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -15,12 +14,12 @@ var __extends = (this && this.__extends) || function(d, b) {
     } else if (typeof define === 'function' && define.amd) {
         define(deps, factory);
     }
-})(["require", "exports", './DisplayObjectContainer', '../event/BaseEvent', '../util/TemplateFactory', '../util/ComponentFactory', '../plugin/jquery.eventListener'], function(require, exports) {
-    var DisplayObjectContainer = require('./DisplayObjectContainer');
-    var BaseEvent = require('../event/BaseEvent');
-    var TemplateFactory = require('../util/TemplateFactory');
-    var ComponentFactory = require('../util/ComponentFactory');
-    var jQuery = require('../plugin/jquery.eventListener');
+})(["require", "exports", './DisplayObjectContainer', '../event/BaseEvent', '../util/TemplateFactory', '../util/ComponentFactory', 'jquery'], function(require, exports) {
+    var DisplayObjectContainer_1 = require('./DisplayObjectContainer');
+    var BaseEvent_1 = require('../event/BaseEvent');
+    var TemplateFactory_1 = require('../util/TemplateFactory');
+    var ComponentFactory_1 = require('../util/ComponentFactory');
+    var jQuery = require('jquery');
     /**
      * The {{#crossLink "DOMElement"}}{{/crossLink}} class is the base view class for all objects that can be placed into the HTML DOM.
      *
@@ -48,8 +47,8 @@ var __extends = (this && this.__extends) || function(d, b) {
      *     this.addChild(view);
      *
      *     // Example: A view extending DOMElement while passing in a jQuery object.
-     *     var Extend = require('structurejs/util/Extend');
-     *     var DOMElement = require('structurejs/display/DOMElement');
+     *     var Extend from 'structurejs/util/Extend');
+     *     var DOMElement from 'structurejs/display/DOMElement');
      *
      *     var ClassName = (function () {
      *
@@ -97,9 +96,9 @@ var __extends = (this && this.__extends) || function(d, b) {
      *     })();
      *
      *     // Example: A view extending DOMElement with a JavaScript template reference passed in.
-     *     var Extend = require('structurejs/util/Extend');
-     *     var DOMElement = require('structurejs/display/DOMElement');
-     *     var HomeTemplate = require('hbs!templates/home/homeTemplate');
+     *     var Extend from 'structurejs/util/Extend');
+     *     var DOMElement from 'structurejs/display/DOMElement');
+     *     var HomeTemplate from 'hbs!templates/home/homeTemplate');
      *
      *     var ClassName = (function () {
      *
@@ -277,7 +276,7 @@ var __extends = (this && this.__extends) || function(d, b) {
              *     }
              *
              *     // EXAMPLE 4: Let's say you wanted to use the Handlebar plugin within RequireJS. You can pass the template into create.
-             *     var HomeTemplate = require('hbs!templates/HomeTemplate');
+             *     var HomeTemplate from 'hbs!templates/HomeTemplate');
              *
              *     ClassName.prototype.create = function () {
              *          _super.prototype.create.call(this, HomeTemplate, {data: "some data"});
@@ -306,7 +305,7 @@ var __extends = (this && this.__extends) || function(d, b) {
                 throw new Error('[' + this.getQualifiedClassName() + '] You cannot call the create method manually. It is only called once automatically during the view lifecycle and should only be called once.');
             }
             if (this.$element == null) {
-                var html = TemplateFactory.create(type, params);
+                var html = TemplateFactory_1.default.create(type, params);
                 if (html) {
                     this.$element = jQuery(html);
                 } else {
@@ -420,7 +419,7 @@ var __extends = (this && this.__extends) || function(d, b) {
             child.setSize(child.width, child.height);
             child.enable();
             child.layout();
-            child.dispatchEvent(new BaseEvent(BaseEvent.ADDED_TO_STAGE));
+            child.dispatchEvent(new BaseEvent_1.default(BaseEvent_1.default.ADDED_TO_STAGE));
         };
         /**
          * @overridden DisplayObjectContainer.addChildAt
@@ -640,12 +639,15 @@ var __extends = (this && this.__extends) || function(d, b) {
             var obj;
             for (var i = 0; i < length; i++) {
                 obj = componentList[i];
-                list = ComponentFactory.create(this.$element.find(obj.selector), obj.component, this);
+                list = ComponentFactory_1.default.create(this.$element.find(obj.selector), obj.component, this);
                 createdChildren = createdChildren.concat(list);
             }
             return createdChildren;
         };
         return DOMElement;
-    })(DisplayObjectContainer);
-    return DOMElement;
+    })(DisplayObjectContainer_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = DOMElement;
 });

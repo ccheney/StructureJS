@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -16,7 +15,7 @@ var __extends = (this && this.__extends) || function(d, b) {
         define(deps, factory);
     }
 })(["require", "exports", './BaseEvent'], function(require, exports) {
-    var BaseEvent = require('./BaseEvent');
+    var BaseEvent_1 = require('./BaseEvent');
     /**
      * The NetworkMonitorEvent...
      *
@@ -99,6 +98,9 @@ var __extends = (this && this.__extends) || function(d, b) {
          */
         NetworkMonitorEvent.OFFLINE = "NetworkMonitorEvent.offline";
         return NetworkMonitorEvent;
-    })(BaseEvent);
-    return NetworkMonitorEvent;
+    })(BaseEvent_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = NetworkMonitorEvent;
 });

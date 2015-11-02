@@ -153,5 +153,8 @@
         };
         return Route;
     })();
-    return Route;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = Route;
 });

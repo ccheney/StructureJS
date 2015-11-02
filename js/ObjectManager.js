@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -16,7 +15,7 @@ var __extends = (this && this.__extends) || function(d, b) {
         define(deps, factory);
     }
 })(["require", "exports", './BaseObject'], function(require, exports) {
-    var BaseObject = require('./BaseObject');
+    var BaseObject_1 = require('./BaseObject');
     /**
      * The {{#crossLink "ObjectManager"}}{{/crossLink}} class is an abstract class that provides enabling and disabling functionality for most StructureJS classes.
      *
@@ -91,6 +90,9 @@ var __extends = (this && this.__extends) || function(d, b) {
             return this;
         };
         return ObjectManager;
-    })(BaseObject);
-    return ObjectManager;
+    })(BaseObject_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = ObjectManager;
 });

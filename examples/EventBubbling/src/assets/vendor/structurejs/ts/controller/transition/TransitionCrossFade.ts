@@ -1,7 +1,7 @@
-import BaseTransition = require('BaseTransition');
-import ITransition = require('../../interface/ITransition');
-import DisplayObjectContainer = require('../../display/DisplayObjectContainer');
-import DOMElement = require('../../display/DOMElement');
+import BaseTransition from 'BaseTransition';
+import ITransition from '../../interface/ITransition';
+import DisplayObjectContainer from '../../display/DisplayObjectContainer';
+import DOMElement from '../../display/DOMElement';
 
 class TransitionCrossFade extends BaseTransition
 {
@@ -58,4 +58,4 @@ class TransitionCrossFade extends BaseTransition
     }
 }
 
-export = TransitionCrossFade;
+export default TransitionCrossFade;

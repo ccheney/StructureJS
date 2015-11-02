@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -16,9 +15,9 @@ var __extends = (this && this.__extends) || function(d, b) {
         define(deps, factory);
     }
 })(["require", "exports", '../event/EventDispatcher', '../event/BaseEvent', '../util/Util'], function(require, exports) {
-    var EventDispatcher = require('../event/EventDispatcher');
-    var BaseEvent = require('../event/BaseEvent');
-    var Util = require('../util/Util');
+    var EventDispatcher_1 = require('../event/EventDispatcher');
+    var BaseEvent_1 = require('../event/BaseEvent');
+    var Util_1 = require('../util/Util');
     /**
      * The Collection class provides a way for you to manage your models.
      *
@@ -113,7 +112,7 @@ var __extends = (this && this.__extends) || function(d, b) {
                 }
             }
             if (silent === false) {
-                this.dispatchEvent(new BaseEvent(BaseEvent.ADDED));
+                this.dispatchEvent(new BaseEvent_1.default(BaseEvent_1.default.ADDED));
             }
             return this;
         };
@@ -144,7 +143,7 @@ var __extends = (this && this.__extends) || function(d, b) {
                 }
             }
             if (silent === false) {
-                this.dispatchEvent(new BaseEvent(BaseEvent.REMOVED));
+                this.dispatchEvent(new BaseEvent_1.default(BaseEvent_1.default.REMOVED));
             }
             return this;
         };
@@ -331,7 +330,7 @@ var __extends = (this && this.__extends) || function(d, b) {
             this.models = [];
             this.length = 0;
             if (silent === false) {
-                this.dispatchEvent(new BaseEvent(BaseEvent.CLEAR));
+                this.dispatchEvent(new BaseEvent_1.default(BaseEvent_1.default.CLEAR));
             }
             return this;
         };
@@ -367,7 +366,7 @@ var __extends = (this && this.__extends) || function(d, b) {
                 }
                 return list;
             } else {
-                return Util.clone(this.models);
+                return Util_1.default.clone(this.models);
             }
         };
         /**
@@ -573,6 +572,9 @@ var __extends = (this && this.__extends) || function(d, b) {
             return unique;
         };
         return Collection;
-    })(EventDispatcher);
-    return Collection;
+    })(EventDispatcher_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = Collection;
 });

@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -16,7 +15,7 @@ var __extends = (this && this.__extends) || function(d, b) {
         define(deps, factory);
     }
 })(["require", "exports", '../BaseObject'], function(require, exports) {
-    var BaseObject = require('../BaseObject');
+    var BaseObject_1 = require('../BaseObject');
     /**
      * The {{#crossLink "BaseEvent"}}{{/crossLink}} class is used as the base class for the creation of Event objects, which are passed as parameters to event listeners when an event occurs.
      *
@@ -40,8 +39,8 @@ var __extends = (this && this.__extends) || function(d, b) {
      * @author Robert S. (www.codeBelt.com)
      * @example
      *     // Example: how to create a custom event by extending BaseEvent.
-     *     var Extend = require('structurejs/util/Extend');
-     *     var BaseEvent = require('structurejs/event/BaseEvent');
+     *     var Extend from 'structurejs/util/Extend');
+     *     var BaseEvent from 'structurejs/event/BaseEvent');
      *
      *     var CountryEvent = (function () {
      *
@@ -454,6 +453,9 @@ var __extends = (this && this.__extends) || function(d, b) {
          */
         BaseEvent.SELECTED = 'BaseEvent.selected';
         return BaseEvent;
-    })(BaseObject);
-    return BaseEvent;
+    })(BaseObject_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = BaseEvent;
 });

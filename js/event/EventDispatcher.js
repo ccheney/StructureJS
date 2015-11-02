@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -16,8 +15,8 @@ var __extends = (this && this.__extends) || function(d, b) {
         define(deps, factory);
     }
 })(["require", "exports", '../ObjectManager', './BaseEvent'], function(require, exports) {
-    var ObjectManager = require('../ObjectManager');
-    var BaseEvent = require('./BaseEvent');
+    var ObjectManager_1 = require('../ObjectManager');
+    var BaseEvent_1 = require('./BaseEvent');
     /**
      * EventDispatcher is the base class for all classes that dispatch events. It is the base class for the {{#crossLink "DisplayObjectContainer"}}{{/crossLink}} class.
      * EventDispatcher provides methods for managing prioritized queues of event listeners and dispatching events.
@@ -204,7 +203,7 @@ var __extends = (this && this.__extends) || function(d, b) {
             }
             var event = type;
             if (typeof event === 'string') {
-                event = new BaseEvent(type, false, true, data);
+                event = new BaseEvent_1.default(type, false, true, data);
             }
             // If target is null then set it to the object that dispatched the event.
             if (event.target == null) {
@@ -304,6 +303,9 @@ var __extends = (this && this.__extends) || function(d, b) {
             _super.prototype.destroy.call(this);
         };
         return EventDispatcher;
-    })(ObjectManager);
-    return EventDispatcher;
+    })(ObjectManager_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = EventDispatcher;
 });

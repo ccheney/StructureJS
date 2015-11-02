@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -16,7 +15,7 @@ var __extends = (this && this.__extends) || function(d, b) {
         define(deps, factory);
     }
 })(["require", "exports", './DisplayObjectContainer'], function(require, exports) {
-    var DisplayObjectContainer = require('./DisplayObjectContainer');
+    var DisplayObjectContainer_1 = require('./DisplayObjectContainer');
     var Sprite = (function(_super) {
         __extends(Sprite, _super);
 
@@ -82,6 +81,9 @@ var __extends = (this && this.__extends) || function(d, b) {
             return this;
         };
         return Sprite;
-    })(DisplayObjectContainer);
-    return Sprite;
+    })(DisplayObjectContainer_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = Sprite;
 });

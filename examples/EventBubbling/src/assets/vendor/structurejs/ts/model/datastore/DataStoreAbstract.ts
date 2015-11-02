@@ -1,6 +1,6 @@
-import EventDispatcher = require('../../event/EventDispatcher');
-import LoaderEvent = require('../../event/LoaderEvent');
-import IDataStore = require('../../interface/IDataStore');
+import EventDispatcher from '../../event/EventDispatcher';
+import LoaderEvent from '../../event/LoaderEvent';
+import IDataStore from '../../interface/IDataStore';
 
 /**
  * The DataStoreAbstract...
@@ -71,4 +71,4 @@ class DataStoreAbstract extends EventDispatcher implements IDataStore
     }
 }
 
-export = DataStoreAbstract;
+export default DataStoreAbstract;

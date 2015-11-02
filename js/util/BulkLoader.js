@@ -6,8 +6,8 @@
         define(deps, factory);
     }
 })(["require", "exports", '../event/EventDispatcher', '../event/LoaderEvent'], function(require, exports) {
-    var EventDispatcher = require('../event/EventDispatcher');
-    var LoaderEvent = require('../event/LoaderEvent');
+    var EventDispatcher_1 = require('../event/EventDispatcher');
+    var LoaderEvent_1 = require('../event/LoaderEvent');
     /**
      * The BulkLoader...
      *
@@ -37,7 +37,7 @@
         BulkLoader.load = function() {
             for (var key in BulkLoader._dataStores) {
                 var dataStore = BulkLoader._dataStores[key];
-                dataStore.addEventListener(LoaderEvent.COMPLETE, BulkLoader.onLoadComplete, BulkLoader);
+                dataStore.addEventListener(LoaderEvent_1.default.COMPLETE, BulkLoader.onLoadComplete, BulkLoader);
                 dataStore.load();
             }
         };
@@ -56,25 +56,28 @@
             }
             var event = type;
             if (typeof event === 'string') {
-                event = new LoaderEvent(type, data);
+                event = new LoaderEvent_1.default(type, data);
             }
             event.target = BulkLoader;
             event.currentTarget = BulkLoader;
             BulkLoader._eventDispatcher.dispatchEvent(event);
         };
         BulkLoader.onLoadComplete = function(event) {
-            event.target.removeEventListener(LoaderEvent.COMPLETE, BulkLoader.onLoadComplete, BulkLoader);
+            event.target.removeEventListener(LoaderEvent_1.default.COMPLETE, BulkLoader.onLoadComplete, BulkLoader);
             for (var key in BulkLoader._dataStores) {
                 var dataStore = BulkLoader._dataStores[key];
                 if (dataStore.complete === false) {
                     return;
                 }
             }
-            BulkLoader._eventDispatcher.dispatchEvent(new LoaderEvent(LoaderEvent.LOAD_COMPLETE));
+            BulkLoader._eventDispatcher.dispatchEvent(new LoaderEvent_1.default(LoaderEvent_1.default.LOAD_COMPLETE));
         };
         BulkLoader._dataStores = [];
-        BulkLoader._eventDispatcher = new EventDispatcher();
+        BulkLoader._eventDispatcher = new EventDispatcher_1.default();
         return BulkLoader;
     })();
-    return BulkLoader;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = BulkLoader;
 });

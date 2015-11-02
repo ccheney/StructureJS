@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -16,7 +15,7 @@ var __extends = (this && this.__extends) || function(d, b) {
         define(deps, factory);
     }
 })(["require", "exports", './DisplayObject'], function(require, exports) {
-    var DisplayObject = require('./DisplayObject');
+    var DisplayObject_1 = require('./DisplayObject');
     var TextField = (function(_super) {
         __extends(TextField, _super);
 
@@ -76,6 +75,9 @@ var __extends = (this && this.__extends) || function(d, b) {
             }
         };
         return TextField;
-    })(DisplayObject);
-    return TextField;
+    })(DisplayObject_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = TextField;
 });

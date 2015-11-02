@@ -1,11 +1,11 @@
-import EventDispatcher = require('../event/EventDispatcher');
-import DOMElement = require('../display/DOMElement');
-import DisplayObjectContainer = require('../display/DisplayObjectContainer');
-import TransitionFactory = require('../util/TransitionFactory');
-import ITransition = require('../interface/ITransition');
-import TransitionType = require('../constant/TransitionType');
-import TransitionManagerEvent = require('../event/TransitionManagerEvent');
-import TweenEvent = require('../event/TweenEvent');
+import EventDispatcher from '../event/EventDispatcher';
+import DOMElement from '../display/DOMElement';
+import DisplayObjectContainer from '../display/DisplayObjectContainer';
+import TransitionFactory from '../util/TransitionFactory';
+import ITransition from '../interface/ITransition';
+import TransitionType from '../constant/TransitionType';
+import TransitionManagerEvent from '../event/TransitionManagerEvent';
+import TweenEvent from '../event/TweenEvent';
 
 /**
  * TODO: YUIDoc_comment
@@ -158,4 +158,4 @@ class TransitionManager extends EventDispatcher
     }
 }
 
-export = TransitionManager;
+export default TransitionManager;

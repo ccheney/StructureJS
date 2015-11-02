@@ -6,7 +6,7 @@
         define(deps, factory);
     }
 })(["require", "exports", './StringUtil'], function(require, exports) {
-    var StringUtil = require('./StringUtil');
+    var StringUtil_1 = require('./StringUtil');
     /**
      * A helper class to provide a convenient and consistent way to render templates.
      *
@@ -49,7 +49,7 @@
                 // Remove pound sign from the id name.
                 templatePath = templatePath.substring(1);
                 var htmlString = document.getElementById(templatePath).innerHTML;
-                htmlString = StringUtil.removeLeadingTrailingWhitespace(htmlString);
+                htmlString = StringUtil_1.default.removeLeadingTrailingWhitespace(htmlString);
                 if (TemplateFactory.templateEngine == TemplateFactory.UNDERSCORE) {
                     // Underscore Template:
                     var templateMethod = window['_'].template(htmlString);
@@ -116,5 +116,8 @@
         TemplateFactory.templateNamespace = 'JST';
         return TemplateFactory;
     })();
-    return TemplateFactory;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = TemplateFactory;
 });

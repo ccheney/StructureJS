@@ -1,6 +1,6 @@
-import BaseObject = require('../BaseObject');
-import URLRequestMethod = require('./URLRequestMethod');
-import URLContentType = require('./URLContentType');
+import BaseObject from '../BaseObject';
+import URLRequestMethod from './URLRequestMethod';
+import URLContentType from './URLContentType';
 
 /**
  * The URLRequest class captures all of the information in a single HTTP request.
@@ -65,4 +65,4 @@ class URLRequest extends BaseObject
     }
 }
 
-export = URLRequest;
+export default URLRequest;

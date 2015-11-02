@@ -1,7 +1,7 @@
-import $ = require('jquery');
+import * as $ from 'jquery';
 
 var $eventListener = $;
-
+console.log("$eventListener", $eventListener);
 /**
  * A bind polyfill for browsers that don't support the bind method.
  */
@@ -132,4 +132,4 @@ $eventListener.fn.removeEventListener = function (type, selector, callback, scop
 }
 
 
-export = $eventListener;
+export default $eventListener;

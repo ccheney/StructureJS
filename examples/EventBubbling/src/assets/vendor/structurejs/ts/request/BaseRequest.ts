@@ -1,9 +1,9 @@
-import URLRequest = require('../net/URLRequest');
-import URLLoader = require('../net/URLLoader');
-import EventDispatcher = require('../event/EventDispatcher');
-import RequestEvent = require('../event/RequestEvent');
-import LoaderEvent = require('../event/LoaderEvent');
-import IDataStore = require('../interface/IDataStore');
+import URLRequest from '../net/URLRequest';
+import URLLoader from '../net/URLLoader';
+import EventDispatcher from '../event/EventDispatcher';
+import RequestEvent from '../event/RequestEvent';
+import LoaderEvent from '../event/LoaderEvent';
+import IDataStore from '../interface/IDataStore';
 
 /**
  * The BaseRequest...
@@ -203,4 +203,4 @@ class BaseRequest extends EventDispatcher implements IDataStore
     }
 }
 
-export = BaseRequest;
+export default BaseRequest;

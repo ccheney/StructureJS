@@ -44,5 +44,8 @@
         }
         return Point;
     })();
-    return Point;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = Point;
 });

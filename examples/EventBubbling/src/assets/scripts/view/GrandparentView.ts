@@ -1,6 +1,6 @@
-import DOMElement = require('../../vendor/structurejs/ts/display/DOMElement');
-import BaseEvent = require('../../vendor/structurejs/ts/event/BaseEvent');
-import ParentView = require('./ParentView');
+import DOMElement from '../../vendor/structurejs/ts/display/DOMElement';
+import BaseEvent from '../../vendor/structurejs/ts/event/BaseEvent';
+import ParentView from './ParentView';
 
 /**
  * TODO: YUIDoc_comment
@@ -95,4 +95,4 @@ class GrandparentView extends DOMElement {
 
 }
 
-export = GrandparentView;
+export default GrandparentView;

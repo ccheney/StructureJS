@@ -1,8 +1,8 @@
-import DisplayObjectContainer = require('./DisplayObjectContainer');
-import BaseEvent = require('../event/BaseEvent');
-import TemplateFactory = require('../util/TemplateFactory');
-import ComponentFactory = require('../util/ComponentFactory');
-import jQuery = require('../plugin/jquery.eventListener');
+import DisplayObjectContainer from './DisplayObjectContainer';
+import BaseEvent from '../event/BaseEvent';
+import TemplateFactory from '../util/TemplateFactory';
+import ComponentFactory from '../util/ComponentFactory';
+import * as jQuery from 'jquery';
 
 /**
  * The {{#crossLink "DOMElement"}}{{/crossLink}} class is the base view class for all objects that can be placed into the HTML DOM.
@@ -31,8 +31,8 @@ import jQuery = require('../plugin/jquery.eventListener');
  *     this.addChild(view);
  *
  *     // Example: A view extending DOMElement while passing in a jQuery object.
- *     var Extend = require('structurejs/util/Extend');
- *     var DOMElement = require('structurejs/display/DOMElement');
+ *     var Extend from 'structurejs/util/Extend');
+ *     var DOMElement from 'structurejs/display/DOMElement');
  *
  *     var ClassName = (function () {
  *
@@ -80,9 +80,9 @@ import jQuery = require('../plugin/jquery.eventListener');
  *     })();
  *
  *     // Example: A view extending DOMElement with a JavaScript template reference passed in.
- *     var Extend = require('structurejs/util/Extend');
- *     var DOMElement = require('structurejs/display/DOMElement');
- *     var HomeTemplate = require('hbs!templates/home/homeTemplate');
+ *     var Extend from 'structurejs/util/Extend');
+ *     var DOMElement from 'structurejs/display/DOMElement');
+ *     var HomeTemplate from 'hbs!templates/home/homeTemplate');
  *
  *     var ClassName = (function () {
  *
@@ -265,7 +265,7 @@ class DOMElement extends DisplayObjectContainer
      *     }
      *
      *     // EXAMPLE 4: Let's say you wanted to use the Handlebar plugin within RequireJS. You can pass the template into create.
-     *     var HomeTemplate = require('hbs!templates/HomeTemplate');
+     *     var HomeTemplate from 'hbs!templates/HomeTemplate');
      *
      *     ClassName.prototype.create = function () {
      *          _super.prototype.create.call(this, HomeTemplate, {data: "some data"});
@@ -711,4 +711,4 @@ class DOMElement extends DisplayObjectContainer
     }
 }
 
-export = DOMElement;
+export default DOMElement;

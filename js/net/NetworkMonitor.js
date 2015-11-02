@@ -6,9 +6,9 @@
         define(deps, factory);
     }
 })(["require", "exports", '../event/EventDispatcher', '../event/NetworkMonitorEvent', '../event/native/NavigatorEvents'], function(require, exports) {
-    var EventDispatcher = require('../event/EventDispatcher');
-    var NetworkMonitorEvent = require('../event/NetworkMonitorEvent');
-    var NavigatorEvents = require('../event/native/NavigatorEvents');
+    var EventDispatcher_1 = require('../event/EventDispatcher');
+    var NetworkMonitorEvent_1 = require('../event/NetworkMonitorEvent');
+    var NavigatorEvents_1 = require('../event/native/NavigatorEvents');
     /**
      * TODO: YUIDoc_comment
      *
@@ -40,8 +40,8 @@
             } else {
                 NetworkMonitor._initialized = true;
             }
-            window.addEventListener(NavigatorEvents.ONLINE, NetworkMonitor.onNetworkMonitorEvent, false);
-            window.addEventListener(NavigatorEvents.OFFLINE, NetworkMonitor.onNetworkMonitorEvent, false);
+            window.addEventListener(NavigatorEvents_1.default.ONLINE, NetworkMonitor.onNetworkMonitorEvent, false);
+            window.addEventListener(NavigatorEvents_1.default.OFFLINE, NetworkMonitor.onNetworkMonitorEvent, false);
             NetworkMonitor.onNetworkMonitorEvent(null);
         };
         /**
@@ -70,7 +70,7 @@
         NetworkMonitor.getStatus = function() {
             // Calling start as a backup if the developer forgets to call NetworkMonitor.start() at the startup of the application.
             NetworkMonitor.start();
-            return (this.connected()) ? NavigatorEvents.ONLINE : NavigatorEvents.OFFLINE;
+            return (this.connected()) ? NavigatorEvents_1.default.ONLINE : NavigatorEvents_1.default.OFFLINE;
         };
         /**
          * TODO: YUIDoc_comment
@@ -82,7 +82,7 @@
          */
         NetworkMonitor.onNetworkMonitorEvent = function(event) {
             var type = (event) ? event.type : NetworkMonitor.getStatus();
-            var networkMonitorEvent = new NetworkMonitorEvent(NetworkMonitorEvent.STATUS, false, false, type, NetworkMonitor.connected(), event);
+            var networkMonitorEvent = new NetworkMonitorEvent_1.default(NetworkMonitorEvent_1.default.STATUS, false, false, type, NetworkMonitor.connected(), event);
             NetworkMonitor.dispatchEvent(networkMonitorEvent);
         };
         /**
@@ -143,7 +143,7 @@
          * @private
          * @static
          */
-        NetworkMonitor._eventDispatcher = new EventDispatcher();
+        NetworkMonitor._eventDispatcher = new EventDispatcher_1.default();
         /**
          * TODO: YUIDoc_comment
          *
@@ -154,5 +154,8 @@
         NetworkMonitor._initialized = false;
         return NetworkMonitor;
     })();
-    return NetworkMonitor;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = NetworkMonitor;
 });

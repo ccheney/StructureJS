@@ -283,5 +283,8 @@
         };
         return StringUtil;
     })();
-    return StringUtil;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = StringUtil;
 });

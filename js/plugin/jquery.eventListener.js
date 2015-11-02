@@ -112,5 +112,8 @@
         }
         return this;
     };
-    return $eventListener;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = $eventListener;
 });

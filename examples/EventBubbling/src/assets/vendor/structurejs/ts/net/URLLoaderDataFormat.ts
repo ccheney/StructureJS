@@ -17,4 +17,4 @@ class URLLoaderDataFormat
     public static TEXT:string = "text";
 }
 
-export = URLLoaderDataFormat;
+export default URLLoaderDataFormat;

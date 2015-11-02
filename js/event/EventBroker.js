@@ -6,8 +6,8 @@
         define(deps, factory);
     }
 })(["require", "exports", './EventDispatcher', './BaseEvent'], function(require, exports) {
-    var EventDispatcher = require('./EventDispatcher');
-    var BaseEvent = require('./BaseEvent');
+    var EventDispatcher_1 = require('./EventDispatcher');
+    var BaseEvent_1 = require('./BaseEvent');
     /**
      * EventBroker is a simple publish and subscribe static class that you can use to fire and receive notifications.
      * Loosely coupled event handling, the subscriber does not know the publisher. Both of them only need to know the event type.
@@ -118,7 +118,7 @@
             }
             var event = type;
             if (typeof event === 'string') {
-                event = new BaseEvent(type, false, false, data);
+                event = new BaseEvent_1.default(type, false, false, data);
             }
             event.target = EventBroker;
             event.currentTarget = EventBroker;
@@ -163,8 +163,11 @@
          * @private
          * @static
          */
-        EventBroker._eventDispatcher = new EventDispatcher();
+        EventBroker._eventDispatcher = new EventDispatcher_1.default();
         return EventBroker;
     })();
-    return EventBroker;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = EventBroker;
 });

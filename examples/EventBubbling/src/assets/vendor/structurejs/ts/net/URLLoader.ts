@@ -1,7 +1,7 @@
-import EventDispatcher = require('../event/EventDispatcher');
-import LoaderEvent = require('../event/LoaderEvent');
-import URLRequest = require('./URLRequest');
-import URLLoaderDataFormat = require('./URLLoaderDataFormat');
+import EventDispatcher from '../event/EventDispatcher';
+import LoaderEvent from '../event/LoaderEvent';
+import URLRequest from './URLRequest';
+import URLLoaderDataFormat from './URLLoaderDataFormat';
 
 /**
  * The URLLoader...
@@ -142,4 +142,4 @@ class URLLoader extends EventDispatcher
     }
 }
 
-export = URLLoader;
+export default URLLoader;

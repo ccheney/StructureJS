@@ -5,8 +5,7 @@ var __extends = (this && this.__extends) || function(d, b) {
     function __() {
         this.constructor = d;
     }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 (function(deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -16,9 +15,9 @@ var __extends = (this && this.__extends) || function(d, b) {
         define(deps, factory);
     }
 })(["require", "exports", '../event/LocalStorageEvent', '../event/EventDispatcher', '../model/BaseModel'], function(require, exports) {
-    var LocalStorageEvent = require('../event/LocalStorageEvent');
-    var EventDispatcher = require('../event/EventDispatcher');
-    var BaseModel = require('../model/BaseModel');
+    var LocalStorageEvent_1 = require('../event/LocalStorageEvent');
+    var EventDispatcher_1 = require('../event/EventDispatcher');
+    var BaseModel_1 = require('../model/BaseModel');
     /**
      * The LocalStorageController...
      *
@@ -94,7 +93,7 @@ var __extends = (this && this.__extends) || function(d, b) {
             if (useNamespace) {
                 key = this.getNamespace() + key;
             }
-            if (data instanceof BaseModel) {
+            if (data instanceof BaseModel_1.default) {
                 data = data.toJSON();
             }
             data = JSON.stringify(data);
@@ -239,9 +238,12 @@ var __extends = (this && this.__extends) || function(d, b) {
          * @protected
          */
         LocalStorageController.prototype.onLocalStorageEvent = function(event) {
-            this.dispatchEvent(new LocalStorageEvent(LocalStorageEvent.STORAGE, false, false, event));
+            this.dispatchEvent(new LocalStorageEvent_1.default(LocalStorageEvent_1.default.STORAGE, false, false, event));
         };
         return LocalStorageController;
-    })(EventDispatcher);
-    return LocalStorageController;
+    })(EventDispatcher_1.default);
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = LocalStorageController;
 });

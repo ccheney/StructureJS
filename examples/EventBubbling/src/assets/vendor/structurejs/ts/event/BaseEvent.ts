@@ -1,4 +1,4 @@
-import BaseObject = require('../BaseObject');
+import BaseObject from '../BaseObject';
 
 /**
  * The {{#crossLink "BaseEvent"}}{{/crossLink}} class is used as the base class for the creation of Event objects, which are passed as parameters to event listeners when an event occurs.
@@ -23,8 +23,8 @@ import BaseObject = require('../BaseObject');
  * @author Robert S. (www.codeBelt.com)
  * @example
  *     // Example: how to create a custom event by extending BaseEvent.
- *     var Extend = require('structurejs/util/Extend');
- *     var BaseEvent = require('structurejs/event/BaseEvent');
+ *     var Extend from 'structurejs/util/Extend');
+ *     var BaseEvent from 'structurejs/event/BaseEvent');
  *
  *     var CountryEvent = (function () {
  *
@@ -476,4 +476,4 @@ class BaseEvent extends BaseObject
 
 }
 
-export = BaseEvent;
+export default BaseEvent;

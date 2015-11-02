@@ -1,4 +1,4 @@
-import BaseEvent = require('./BaseEvent');
+import BaseEvent from './BaseEvent';
 
 /**
  * The RequestEvent...
@@ -45,4 +45,4 @@ class RequestEvent extends BaseEvent
 
 }
 
-export = RequestEvent;
+export default RequestEvent;

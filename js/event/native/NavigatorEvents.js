@@ -26,5 +26,8 @@
         NavigatorEvents.OFFLINE = "offline";
         return NavigatorEvents;
     })();
-    return NavigatorEvents;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = NavigatorEvents;
 });

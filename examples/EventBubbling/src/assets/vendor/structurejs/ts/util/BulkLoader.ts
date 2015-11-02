@@ -1,6 +1,6 @@
-import IDataStore = require('../interface/IDataStore');
-import EventDispatcher = require('../event/EventDispatcher');
-import LoaderEvent = require('../event/LoaderEvent');
+import IDataStore from '../interface/IDataStore';
+import EventDispatcher from '../event/EventDispatcher';
+import LoaderEvent from '../event/LoaderEvent';
 
 /**
  * The BulkLoader...
@@ -92,4 +92,4 @@ class BulkLoader {
 
 }
 
-export = BulkLoader;
+export default BulkLoader;

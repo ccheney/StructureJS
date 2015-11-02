@@ -90,4 +90,4 @@ class TransitionType
     }
 }
 
-export = TransitionType;
+export default TransitionType;
