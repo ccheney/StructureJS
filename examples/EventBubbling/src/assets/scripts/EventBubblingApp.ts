@@ -1,7 +1,7 @@
-import Stage = require('../vendor/structurejs/ts/display/Stage');
-import BaseEvent = require('../vendor/structurejs/ts/event/BaseEvent');
-import EventBroker = require('../vendor/structurejs/ts/event/EventBroker');
-import GrandparentView = require('./view/GrandparentView');
+import Stage from '../../../../../ts/display/Stage';
+//import BaseEvent = require('../vendor/structurejs/ts/event/BaseEvent');
+//import EventBroker = require('../vendor/structurejs/ts/event/EventBroker');
+//import GrandparentView = require('./view/GrandparentView');
 
 /**
  * TODO: YUIDoc_comment
@@ -12,9 +12,9 @@ import GrandparentView = require('./view/GrandparentView');
  **/
 class EventBubblingApp extends Stage {
 
-    protected _grandpaView:GrandparentView = null;
-    protected _$clearButton:JQuery = null;
-    protected _$stageMessage:JQuery = null;
+    //protected _grandpaView:GrandparentView = null;
+    //protected _$clearButton:JQuery = null;
+    //protected _$stageMessage:JQuery = null;
 
     constructor() {
         super();
@@ -26,19 +26,19 @@ class EventBubblingApp extends Stage {
     public create() {
         super.create();
 
-        this._grandpaView = new GrandparentView(this.$element.find('.js-grandParentContent'));
-        this.addChild(this._grandpaView);
-
-        this._$clearButton = this.$element.find('.js-clearButton');
-        this._$stageMessage = this.$element.find('.js-stageMessage');
+        //this._grandpaView = new GrandparentView(this.$element.find('.js-grandParentContent'));
+        //this.addChild(this._grandpaView);
+        //
+        //this._$clearButton = this.$element.find('.js-clearButton');
+        //this._$stageMessage = this.$element.find('.js-stageMessage');
     }
 
     /**
      * @overridden Stage.layout
      */
     public layout() {
-        this._$stageMessage.text('');
-        this._grandpaView.layout();
+        //this._$stageMessage.text('');
+        //this._grandpaView.layout();
 
         return this;
     }
@@ -49,13 +49,13 @@ class EventBubblingApp extends Stage {
     public enable() {
         if (this.isEnabled === true) { return this; }
 
-        this.addEventListener(BaseEvent.CHANGE, this._onBubbled, this);
-
-        EventBroker.addEventListener(BaseEvent.CHANGE, this._onGlobalEvent, this);
-
-        this._$clearButton.addEventListener('click', this._onClearClick, this);
-
-        this._grandpaView.enable();
+        //this.addEventListener(BaseEvent.CHANGE, this._onBubbled, this);
+        //
+        //EventBroker.addEventListener(BaseEvent.CHANGE, this._onGlobalEvent, this);
+        //
+        //this._$clearButton.addEventListener('click', this._onClearClick, this);
+        //
+        //this._grandpaView.enable();
 
         return super.enable();
     }
@@ -66,11 +66,11 @@ class EventBubblingApp extends Stage {
     public disable() {
         if (this.isEnabled === false) { return this; }
 
-        this.removeEventListener(BaseEvent.CHANGE, this._onBubbled, this);
-
-        this._$clearButton.removeEventListener('click', this._onClearClick, this);
-
-        this._grandpaView.disable();
+        //this.removeEventListener(BaseEvent.CHANGE, this._onBubbled, this);
+        //
+        //this._$clearButton.removeEventListener('click', this._onClearClick, this);
+        //
+        //this._grandpaView.disable();
 
         return super.disable();
     }
@@ -79,7 +79,7 @@ class EventBubblingApp extends Stage {
      * @overridden Stage.destroy
      */
     public destroy() {
-        this._grandpaView.destroy();
+        //this._grandpaView.destroy();
 
         super.destroy();
     }
@@ -89,11 +89,11 @@ class EventBubblingApp extends Stage {
     }
 
     protected _onBubbled(baseEvent) {
-        var text = '<strong>' + this.getQualifiedClassName() + '</strong> recevied a event.<br/ >';
-        text += '<strong>' + baseEvent.currentTarget.getQualifiedClassName() + '</strong> last touched the event.<br/ >';
-        text += '<strong>' + baseEvent.target.getQualifiedClassName() + '</strong> sent the event.';
-
-        this._$stageMessage.html(text);
+        //var text = '<strong>' + this.getQualifiedClassName() + '</strong> recevied a event.<br/ >';
+        //text += '<strong>' + baseEvent.currentTarget.getQualifiedClassName() + '</strong> last touched the event.<br/ >';
+        //text += '<strong>' + baseEvent.target.getQualifiedClassName() + '</strong> sent the event.';
+        //
+        //this._$stageMessage.html(text);
     }
 
     protected _onGlobalEvent = function(baseEvent) {
@@ -102,4 +102,4 @@ class EventBubblingApp extends Stage {
 
 }
 
-export = EventBubblingApp;
+export default EventBubblingApp;

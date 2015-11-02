@@ -1,6 +1,4 @@
-// Imports
-import $ = require('jquery');
-import EventBubblingApp = require('./EventBubblingApp');
+import EventBubblingApp from './EventBubblingApp';
 
 $(document).ready(function() {
     var app = new EventBubblingApp();
