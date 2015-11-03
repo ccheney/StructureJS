@@ -1,7 +1,7 @@
-import * as $ from 'jquery';
+import * as jQuery from 'jquery';
 
 var $eventListener = $;
-console.log("$eventListener", $eventListener);
+
 /**
  * A bind polyfill for browsers that don't support the bind method.
  */

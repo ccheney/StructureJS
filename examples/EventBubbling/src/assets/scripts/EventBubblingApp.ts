@@ -1,4 +1,3 @@
-//import Stage from '../../../../../ts/display/Stage';
 import Stage from '../vendor/structurejs/ts/display/Stage';
 import BaseEvent from '../vendor/structurejs/ts/event/BaseEvent';
 import EventBroker from '../vendor/structurejs/ts/event/EventBroker';

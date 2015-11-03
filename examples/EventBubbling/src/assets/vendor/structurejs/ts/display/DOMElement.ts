@@ -2,7 +2,7 @@ import DisplayObjectContainer from './DisplayObjectContainer';
 import BaseEvent from '../event/BaseEvent';
 import TemplateFactory from '../util/TemplateFactory';
 import ComponentFactory from '../util/ComponentFactory';
-import * as jQuery from 'jquery';
+import jQuery from '../plugin/jquery.eventListener';
 
 /**
  * The {{#crossLink "DOMElement"}}{{/crossLink}} class is the base view class for all objects that can be placed into the HTML DOM.
