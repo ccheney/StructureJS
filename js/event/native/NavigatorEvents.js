@@ -1,20 +1,21 @@
-(function(deps, factory) {
+(function (deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    } else if (typeof define === 'function' && define.amd) {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
+    }
+    else if (typeof define === 'function' && define.amd) {
         define(deps, factory);
     }
-})(["require", "exports"], function(require, exports) {
-    var NavigatorEvents = (function() {
-        function NavigatorEvents() {}
-            /**
-             * TODO: YUIDoc_comment
-             *
-             * @event ONLINE
-             * @type {string}
-             * @static
-             */
+})(["require", "exports"], function (require, exports) {
+    var NavigatorEvents = (function () {
+        function NavigatorEvents() {
+        }
+        /**
+         * TODO: YUIDoc_comment
+         *
+         * @event ONLINE
+         * @type {string}
+         * @static
+         */
         NavigatorEvents.ONLINE = "online";
         /**
          * TODO: YUIDoc_comment

@@ -1,22 +1,18 @@
-var __extends = (this && this.__extends) || function(d, b) {
-    for (var p in b)
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-
-    function __() {
-        this.constructor = d;
-    }
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-(function(deps, factory) {
+(function (deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    } else if (typeof define === 'function' && define.amd) {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
+    }
+    else if (typeof define === 'function' && define.amd) {
         define(deps, factory);
     }
-})(["require", "exports", '../event/EventDispatcher', '../event/LoaderEvent'], function(require, exports) {
-    var EventDispatcher_1 = require('../event/EventDispatcher');
-    var LoaderEvent_1 = require('../event/LoaderEvent');
+})(["require", "exports", '../event/EventDispatcher', '../event/LoaderEvent'], function (require, exports) {
+    var EventDispatcher = require('../event/EventDispatcher');
+    var LoaderEvent = require('../event/LoaderEvent');
     /**
      * The ImageLoader...
      *
@@ -27,34 +23,30 @@ var __extends = (this && this.__extends) || function(d, b) {
      * @constructor
      * @author Robert S. (www.codeBelt.com)
      */
-    var ImageLoader = (function(_super) {
+    var ImageLoader = (function (_super) {
         __extends(ImageLoader, _super);
-
         function ImageLoader(path) {
             _super.call(this);
             this.complete = false;
             this.src = path;
             this.init();
         }
-        ImageLoader.prototype.init = function() {
+        ImageLoader.prototype.init = function () {
             var _this = this;
             this._image = new Image();
-            this._image.onload = function(event) {
+            this._image.onload = function (event) {
                 _this.onImageLoad();
             };
         };
-        ImageLoader.prototype.load = function() {
+        ImageLoader.prototype.load = function () {
             this._image.src = this.src;
         };
-        ImageLoader.prototype.onImageLoad = function() {
+        ImageLoader.prototype.onImageLoad = function () {
             this.data = this._image;
             this.complete = true;
-            this.dispatchEvent(LoaderEvent_1.default.COMPLETE);
+            this.dispatchEvent(LoaderEvent.COMPLETE);
         };
         return ImageLoader;
-    })(EventDispatcher_1.default);
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.default = ImageLoader;
+    })(EventDispatcher);
+    return ImageLoader;
 });

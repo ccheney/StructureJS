@@ -1,9 +1,9 @@
-import BaseEvent from './BaseEvent';
+import BaseEvent = require('./BaseEvent');
 
 /**
- * The LanguageEvent...
+ * The BulkLoaderEvent...
  *
- * @class LanguageEvent
+ * @class BulkLoaderEvent
  * @extends BaseEvent
  * @param type {string} The type of event. The type is case-sensitive.
  * @param [bubbles=false] {boolean} Indicates whether an event is a bubbling event. If the event can bubble, this value is true; otherwise it is false.
@@ -13,37 +13,66 @@ import BaseEvent from './BaseEvent';
  * @param [data=null] {any} Use to pass any type of data with the event.
  * @module StructureJS
  * @submodule event
+ * @requires Extend
+ * @requires BaseEvent
  * @constructor
  * @author Robert S. (www.codeBelt.com)
  */
-class LanguageEvent extends BaseEvent
+class BulkLoaderEvent extends BaseEvent
 {
     /**
-     * TODO: YUIDoc_comment
+     * The BulkLoaderEvent.COMPLETE constant defines the value of the type property of an loader event object.
      *
-     * @event CONFIG_LOADED
+     * @event COMPLETE
      * @type {string}
      * @static
      */
-    public static CONFIG_LOADED:string = "LanguageEvent.configLoaded";
+    public static COMPLETE:string = 'BulkLoaderEvent.complete';
 
     /**
-     * TODO: YUIDoc_comment
+     * The BulkLoaderEvent.LOAD_COMPLETE constant defines the value of the type property of an loader event object.
      *
      * @event LOAD_COMPLETE
      * @type {string}
      * @static
      */
-    public static LANGUAGE_LOADED:string = "LanguageEvent.languageLoaded";
+    public static LOAD_COMPLETE:string = 'BulkLoaderEvent.loadComplete';
+
+    /**
+     * The BulkLoaderEvent.ERROR constant defines the value of the type property of an loader event object.
+     *
+     * @event ERROR
+     * @type {string}
+     * @static
+     */
+    public static ERROR:string = 'BulkLoaderEvent.error';
 
     /**
      * TODO: YUIDoc_comment
      *
-     * @event LANGUAGE_CHANGE
-     * @type {string}
-     * @static
+     * @property total
+     * @type {number}
+     * @public
      */
-    public static LANGUAGE_CHANGE:string = "LanguageEvent.languageChange";
+    public total:number = 0;
+
+    /**
+     * TODO: YUIDoc_comment
+     *
+     * @property totalComplete
+     * @type {number}
+     * @public
+     */
+    public totalComplete:number = 0;
+
+    /**
+     * TODO: YUIDoc_comment
+     *
+     * @property percentComplete
+     * @type {number}
+     * @public
+     */
+    public percentComplete:number = 0;
 
     constructor(type:string, bubbles:boolean = false, cancelable:boolean = false, data:any = null)
     {
@@ -52,4 +81,4 @@ class LanguageEvent extends BaseEvent
 
 }
 
-export default LanguageEvent;
+export = BulkLoaderEvent;

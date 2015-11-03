@@ -1,7 +1,7 @@
-import DisplayObjectContainer from './DisplayObjectContainer';
-import DOMElement from './DOMElement';
-import DisplayObject from './DisplayObject';
-import Point from '../geom/Point';
+import DisplayObjectContainer = require('./DisplayObjectContainer');
+import DOMElement = require('./DOMElement');
+import DisplayObject = require('./DisplayObject');
+import Point = require('../geom/Point');
 
 class CanvasElement extends DOMElement
 {
@@ -211,13 +211,13 @@ class CanvasElement extends DOMElement
         return this;
     }
 
-    public update():any
+    public renderCanvas():any
     {
         this.ctx.clearRect(0, 0, this.width, this.height);
 
         for (var i:number = 0; i < this.numChildren; i++)
         {
-            this.children[i].update();
+            this.children[i].renderCanvas();
         }
     }
 
@@ -370,4 +370,4 @@ class CanvasElement extends DOMElement
 
 }
 
-export default CanvasElement;
+export = CanvasElement;

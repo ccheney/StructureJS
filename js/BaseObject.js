@@ -1,17 +1,17 @@
-(function(deps, factory) {
+(function (deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    } else if (typeof define === 'function' && define.amd) {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
+    }
+    else if (typeof define === 'function' && define.amd) {
         define(deps, factory);
     }
-})(["require", "exports", './util/Util'], function(require, exports) {
+})(["require", "exports", './util/Util'], function (require, exports) {
     ///<reference path='_declare/jquery.d.ts'/>
     ///<reference path='_declare/handlebars.d.ts'/>
     ///<reference path='_declare/greensock.d.ts'/>
     ///<reference path='_declare/jquery.eventListener.d.ts'/>
     ///<reference path='_declare/log.d.ts'/>
-    var Util_1 = require('./util/Util');
+    var Util = require('./util/Util');
     /**
      * The {{#crossLink "BaseObject"}}{{/crossLink}} class is an abstract class that provides common properties and functionality for all StructureJS classes.
      *
@@ -22,32 +22,32 @@
      * @constructor
      * @author Robert S. (www.codeBelt.com)
      */
-    var BaseObject = (function() {
+    var BaseObject = (function () {
         function BaseObject() {
-                /**
-                 * The sjsId (StructureJS ID) is a unique identifier automatically assigned to most StructureJS objects upon instantiation.
-                 *
-                 * @property sjsId
-                 * @type {int}
-                 * @default null
-                 * @writeOnce
-                 * @readOnly
-                 * @public
-                 */
-                this.sjsId = null;
-                this.sjsId = Util_1.default.uniqueId();
-            }
             /**
-             * Returns the fully qualified class name of an object.
+             * The sjsId (StructureJS ID) is a unique identifier automatically assigned to most StructureJS objects upon instantiation.
              *
-             * @method getQualifiedClassName
-             * @returns {string} Returns the class name.
+             * @property sjsId
+             * @type {int}
+             * @default null
+             * @writeOnce
+             * @readOnly
              * @public
-             * @example
-             *     instance.getQualifiedClassName();
              */
-        BaseObject.prototype.getQualifiedClassName = function() {
-            return Util_1.default.getName(this);
+            this.sjsId = null;
+            this.sjsId = Util.uniqueId();
+        }
+        /**
+         * Returns the fully qualified class name of an object.
+         *
+         * @method getQualifiedClassName
+         * @returns {string} Returns the class name.
+         * @public
+         * @example
+         *     instance.getQualifiedClassName();
+         */
+        BaseObject.prototype.getQualifiedClassName = function () {
+            return Util.getName(this);
         };
         /**
          * The purpose of the destroy method is to make an object ready for garbage collection. This
@@ -69,7 +69,7 @@
          *          _super.prototype.destroy.call(this);
          *     }
          */
-        BaseObject.prototype.destroy = function() {
+        BaseObject.prototype.destroy = function () {
             for (var key in this) {
                 if (this.hasOwnProperty(key)) {
                     this[key] = null;
@@ -78,8 +78,5 @@
         };
         return BaseObject;
     })();
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.default = BaseObject;
+    return BaseObject;
 });
