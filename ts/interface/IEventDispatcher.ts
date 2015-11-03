@@ -1,5 +1,5 @@
-import ICore = require('./ICore');
-import BaseEvent = require('../event/BaseEvent');
+import ICore from './ICore';
+import BaseEvent from '../event/BaseEvent';
 
 /**
  * TODO: YUIDoc_comment
@@ -49,4 +49,4 @@ interface IEventDispatcher extends ICore
 
 }
 
-export = IEventDispatcher;
+export default IEventDispatcher;
