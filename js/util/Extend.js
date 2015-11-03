@@ -37,10 +37,10 @@
      *     })();
      */
     var Extend = function(inheritorClass, baseClass) {
-        for (var p in baseClass) {
-            if (baseClass.hasOwnProperty(p)) {
+        for (var property in baseClass) {
+            if (baseClass.hasOwnProperty(property)) {
                 // Add any static properties from the baseClass to the inheritorClass.
-                inheritorClass[p] = baseClass[p];
+                inheritorClass[property] = baseClass[property];
             }
         }
 
