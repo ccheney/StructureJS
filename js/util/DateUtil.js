@@ -86,8 +86,6 @@
         DateUtil.SHORT_MONTH_LABELS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         return DateUtil;
     })();
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = DateUtil;
 });

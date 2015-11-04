@@ -312,8 +312,6 @@
         Util._idCounter = 0;
         return Util;
     })();
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = Util;
 });

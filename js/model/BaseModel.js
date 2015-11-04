@@ -11,8 +11,8 @@ var __extends = (this && this.__extends) || function (d, b) {
         define(deps, factory);
     }
 })(["require", "exports", '../BaseObject', '../util/Util'], function (require, exports) {
-    var BaseObject = require('../BaseObject');
-    var Util = require('../util/Util');
+    var BaseObject_1 = require('../BaseObject');
+    var Util_1 = require('../util/Util');
     /**
      *  Base Model is a design pattern used to transfer data between software application subsystems.
      *
@@ -175,8 +175,8 @@ var __extends = (this && this.__extends) || function (d, b) {
          *     var obj = carModel.toJSON();
          */
         BaseModel.prototype.toJSON = function () {
-            var clone = Util.clone(this);
-            return Util.deletePropertyFromObject(clone, ['sjsId']);
+            var clone = Util_1.default.clone(this);
+            return Util_1.default.deletePropertyFromObject(clone, ['sjsId']);
         };
         /**
          * Converts a  Base Model to a JSON string,
@@ -220,6 +220,7 @@ var __extends = (this && this.__extends) || function (d, b) {
             return clonedBaseModel;
         };
         return BaseModel;
-    })(BaseObject);
-    return BaseModel;
+    })(BaseObject_1.default);
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.default = BaseModel;
 });

@@ -11,8 +11,8 @@ var __extends = (this && this.__extends) || function (d, b) {
         define(deps, factory);
     }
 })(["require", "exports", '../event/EventDispatcher', '../event/LoaderEvent'], function (require, exports) {
-    var EventDispatcher = require('../event/EventDispatcher');
-    var LoaderEvent = require('../event/LoaderEvent');
+    var EventDispatcher_1 = require('../event/EventDispatcher');
+    var LoaderEvent_1 = require('../event/LoaderEvent');
     /**
      * The ImageLoader...
      *
@@ -44,9 +44,10 @@ var __extends = (this && this.__extends) || function (d, b) {
         ImageLoader.prototype.onImageLoad = function () {
             this.data = this._image;
             this.complete = true;
-            this.dispatchEvent(LoaderEvent.COMPLETE);
+            this.dispatchEvent(LoaderEvent_1.default.COMPLETE);
         };
         return ImageLoader;
-    })(EventDispatcher);
-    return ImageLoader;
+    })(EventDispatcher_1.default);
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.default = ImageLoader;
 });

@@ -10,7 +10,7 @@ require.config({
         jquery: '../vendor/jquery/jquery-1.9.1',
         lodash: '../vendor/lodash/lodash.compat',
         handlebars: '../vendor/handlebars/handlebars',
-        structurejs: '../../../../js/',
+        structurejs: '../../../../js',
 
         //shortcut paths
         templates: '../templates',
