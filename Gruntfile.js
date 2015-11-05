@@ -200,7 +200,6 @@ module.exports = function(grunt) {
                     basePath: '',
                     sourceMap: false,
                     declaration: false,
-                    nolib: false,
                     comments: true
                 }
             }
