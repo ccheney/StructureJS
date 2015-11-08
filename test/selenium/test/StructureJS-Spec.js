@@ -31,8 +31,8 @@ describe('testing javascript in the browser', function() {
     });
 
     it('should handle clicking on a headline', function(done) {
-        var headline1 = this.browser.findElement(webdriver.By.Id('sjsId1'));
-        var headline2 = this.browser.findElement(webdriver.By.Id('sjsId2'));
+        var headline1 = this.browser.findElement(webdriver.By.id('sjsId1'));
+        var headline2 = this.browser.findElement(webdriver.By.id('sjsId2'));
 
         // headline.click();
 
