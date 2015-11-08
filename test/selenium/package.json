@@ -19,9 +19,12 @@
     "grunt-contrib-uglify": "*",
     "grunt-usemin": "*",
     "jit-grunt": "*",
-    "load-grunt-tasks": "*"
+    "load-grunt-tasks": "*",
+    "mocha": "*",
+    "selenium-webdriver": "*"
   },
   "scripts": {
-    "postinstall": "bower install && grunt"
+    "postinstall": "bower install && grunt",
+    "test": "mocha --timeout 10000"
   }
 }
