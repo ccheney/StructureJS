@@ -26,7 +26,12 @@ module.exports = function(config)
 
         // test results reporter to use
         // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-        reporters: ['progress'],
+        reporters: ['progress', 'coverage', 'coveralls'],
+
+        coverageReporter: {
+            type: 'lcovonly',
+            dir: 'coverage/'
+        },
 
 
         // web server port
@@ -64,7 +69,9 @@ module.exports = function(config)
         plugins: [
             'karma-phantomjs-launcher',
             'karma-jasmine',
-            'karma-browserify'
+            'karma-browserify',
+            'karma-coverage',
+            'karma-coveralls'
         ],
 
 
