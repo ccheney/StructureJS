@@ -1,0 +1,11 @@
+{
+  "name": "structurejs-selenium-test",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "requirejs": "*",
+    "structurejs": "*",
+    "handlebars": "*"
+  },
+  "devDependencies": {}
+}
