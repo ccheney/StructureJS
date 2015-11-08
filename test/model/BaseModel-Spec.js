@@ -61,7 +61,7 @@ var movies = [
 
 
 var BaseModel = require('../../js/model/BaseModel');
-var MovieModel = require('./basemodels/MovieModel');
+var MovieModel = require('./models/MovieModel');
 
 describe("BaseModel", function() {
 

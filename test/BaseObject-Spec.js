@@ -4,8 +4,8 @@ describe("BaseObject", function() {
 
     var baseObject = new BaseObject();
 
-    it("baseObject.cid", function() {
-        expect(baseObject.cid).toEqual(1);
+    it("baseObject.sjsId", function() {
+        expect(baseObject.sjsId).toEqual(1);
     });
 
     it("baseObject.getQualifiedClassName()", function() {
@@ -14,7 +14,7 @@ describe("BaseObject", function() {
 
     it("baseObject.destroy()", function() {
         baseObject.destroy();
-        expect(baseObject.cid).toEqual(null);
+        expect(baseObject.sjsId).toEqual(null);
     });
 });
 //http://net.tutsplus.com/tutorials/javascript-ajax/testing-your-javascript-with-jasmine/

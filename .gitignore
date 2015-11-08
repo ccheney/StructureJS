@@ -23,3 +23,4 @@ bower_components
 ts/**/*.js
 .baseDir.js
 .baseDir.ts
+coverage

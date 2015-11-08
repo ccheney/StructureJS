@@ -1,4 +1,5 @@
 # `StructureJS`
+[![Coverage Status](https://coveralls.io/repos/ccheney/StructureJS/badge.svg?branch=master&service=github)](https://coveralls.io/github/ccheney/StructureJS?branch=master) [![Build Status](https://travis-ci.org/ccheney/StructureJS.svg)](https://travis-ci.org/ccheney/StructureJS)
 
 A class based utility library for building modular and scalable web platform applications. Features opt-in classes and utilities which provide a solid foundation and toolset to build your next project.
 
