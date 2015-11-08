@@ -7,6 +7,7 @@ env:
     - secure: dfYBGtVWl6oHuNYD0132K+jQNF26Ws/8iD5wXgbHg9KXcjxZi9nCGbXYl3SyHGUdWoLJzqZPq8ONDiNfwiq48wf88m+TjjwJMSEtRbqfs1YEj9dxWQq80K3iNkXhi//5SsotocG23NPKlcth2CPfPZWoCt9N4/gcqO+vn2YyP4z46yR4uAZRtiTwMBKUVVih3QcndYkhnNeLJTlFW0SfMGFn/jH7ViVyHpXOwhMNCGUo3OzCUSSwRlgG+qtS2/ZbyPdlSHIkvOO1bstGO04g8TUaepl1+w/T3EZ0LaOdnluycDCdXgTOn1AuOkKKKNdgm6xTi9N2rM6Ma2wq2F+9EzGrKvJJ+nIXk0vGnBL1CUW6IUz9hDqNugCmOK3YDOpfcRvsiWsVUGRdTgZ2eClMkjqGusKnlWqTanwkRpHFRZh8SEf/lXXS2aTOLOzx9EIyvFeZQMeDulx5jcEhUSMoaX0WZen00PA3C+lTwgWvH2RM8dAkCh0RSFSMscyQwEQ6bUppfZLjDuBhr7dz+muTAhPQrxKzthxqTSFgzv+Jq6G4z753a2zem7pXLel/j2N7qnVZUQUkcvBPc85atvnJkSSYpp0GxwQBUNjGA/DafvLZ6Kha8wywRJzA2b2N73NTYn/a4cxGrBcjiEtptFpfq9C5j93fql2XTUi06i39ewM=
 before_script:
   - npm install -g bower
+  - npm install -g grunt-cli
   - cd test/selenium && npm install
   - python -m SimpleHTTPServer &
   - sleep 2
